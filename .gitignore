@@ -1,3 +1,11 @@
+# processed input data
+data/dsre_dev_examples.json
+data/dsre_train_examples.json
+data/popular_docs.json
+
+# training data
+r/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

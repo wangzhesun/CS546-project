@@ -839,15 +839,15 @@ class CodredCallback(TrainerCallback):
         parser.add_argument('--dsre_only', action='store_true')
         parser.add_argument('--raw_only', action='store_true')
         parser.add_argument('--load_model_path', type=str, default=None)
-        parser.add_argument('--train_file', type=str, default='../data/rawdata/train_dataset.json')
-        parser.add_argument('--dev_file', type=str, default='../data/rawdata/dev_dataset.json')
-        parser.add_argument('--test_file', type=str, default='../data/rawdata/test_dataset.json')
-        parser.add_argument('--dsre_file', type=str, default='../data/dsre_train_examples.json')
+        parser.add_argument('--train_file', type=str, default='/root/autodl-tmp/CS546-project/data/rawdata/train_dataset.json')
+        parser.add_argument('--dev_file', type=str, default='/root/autodl-tmp/CS546-project/data/rawdata/dev_dataset.json')
+        parser.add_argument('--test_file', type=str, default='/root/autodl-tmp/CS546-project/data/rawdata/test_dataset.json')
+        parser.add_argument('--dsre_file', type=str, default='/root/autodl-tmp/CS546-project/data/dsre_train_examples.json')
         parser.add_argument('--model_name', type=str, default='bert')
 
 
     def load_model(self):
-        relations = json.load(open('../data/rawdata/relations.json'))
+        relations = json.load(open('/root/autodl-tmp/CS546-project/data/rawdata/relations.json'))
         relations.sort()
         self.relations = ['n/a'] + relations
         self.relation2id = dict()
